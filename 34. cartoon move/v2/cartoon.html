@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .cartoon{
+            width: 100px;
+            height: 100px;
+            background: url("img/cartoon.png") no-repeat 0 0;
+            position: absolute;
+        }
+
+        .left-up{
+            background-position: 0 0;
+        }
+
+        .up{
+            background-position: -100px 0;
+         }
+
+        .right-up{
+            background-position: -200px 0;
+        }
+
+        .left{
+            background-position: 0 -100px;
+        }
+
+        .middle{
+            background-position: -100px -100px;
+        }
+
+        .right{
+            background-position: -200px -100px;
+        }
+
+        .left-down{
+            background-position: 0 -200px;
+        }
+
+        .down{
+            background-position: -100px -200px;
+        }
+
+        .right-down{
+            background-position: -100px -200px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="cartoon middle"></div>
+    <script>
+        var cartoon = document.querySelector('.cartoon');
+
+        //初始化卡通人物的位置，上下左右居中
+        var cleft = (window.innerWidth - cartoon.offsetWidth)/2;
+        var ctop = (window.innerHeight - cartoon.offsetHeight)/2;
+
+
+        var maxLeft = window.innerWidth - cartoon.offsetWidth;
+        var maxTop = window.innerHeight - cartoon.offsetHeight;
+
+        cartoon.style.left = cleft+'px';
+        cartoon.style.top = ctop+'px';
+
+        //方向盘
+        var direction = {
+            left:false,
+            top:false,
+            right:false,
+            bottom:false
+
+        };
+
+        //设置开关
+        var onoff = false;
+
+        var speed = 10;
+
+        //当按键按下去，定时器就开启
+        //        左键     37
+        //        上键     38
+        //        右键     39
+        //        下键     40
+        document.onkeydown = function(ev){
+//
+//            if(onoff) return;
+//            onoff = true;
+//
+            var ev = ev||event;
+
+                if(ev.keyCode === 37){
+                    direction.left = true;
+                }
+
+                if(ev.keyCode === 38){
+                    direction.top = true;
+                }
+
+                if(ev.keyCode === 39){
+                    direction.right = true;
+                }
+
+                if(ev.keyCode === 40){
+                    direction.bottom = true;
+                }
+
+        };
+
+
+
+        document.onkeyup = function(ev){
+            var ev = ev||event;
+            if(ev.keyCode === 37){
+                direction.left = false;
+            }
+
+            if(ev.keyCode === 38){
+                direction.top = false;
+            }
+
+            if(ev.keyCode === 39){
+                direction.right = false;
+            }
+
+            if(ev.keyCode === 40){
+                direction.bottom = false;
+            }
+        };
+
+
+
+        setInterval(function(){
+
+            if(direction.left){
+                cleft -= speed;
+                if(cleft <= 0){
+                    cleft = 0;
+                }
+                cartoon.style.left = cleft + 'px';
+            }
+
+            if(direction.top){
+                ctop -= speed;
+                if(ctop <= 0){
+                    ctop = 0;
+                }
+                cartoon.style.top = ctop + 'px';
+            }
+
+            if(direction.bottom){
+                ctop += speed;
+                if(ctop >= maxTop){
+                    ctop = maxTop;
+                }
+                cartoon.style.top = ctop + 'px';
+            }
+
+            if(direction.right){
+                cleft += speed;
+                if(cleft >= maxLeft){
+                    cleft = maxLeft;
+                }
+                cartoon.style.left = cleft + 'px';
+            }
+
+        },10);
+
+
+    </script>
+</body>
+</html>

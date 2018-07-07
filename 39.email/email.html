@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>邮箱</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/email.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row header">
+            <div class="col-md-2 logo"><h1><img src="image/logo.png" alt="logo"></h1></div>
+            <div class="col-md-10 toolbar">
+                <a href="javascript:;">邮箱首页</a><span class="divider">|</span>
+                <a href="javascript:;">设置</a>
+                <span class="msg bg-success"><i class="glyphicon glyphicon-ok"></i>举报成功。已将邮件成功移入垃圾箱[支持垃圾箱净化计划]</span>
+                <span class="msg bg-warning"><i class="glyphicon glyphicon-user"></i>邮件举报中</span>
+            </div>
+        </div>
+        <div class="row content">
+            <div class="col-md-2 menu">
+                <ul class="nav nav-pills nav-stacked main-fn" role="tab-main">
+                    <li>
+                        <a href="#"><i class="glyphicon glyphicon-edit pink"></i>写信</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="glyphicon glyphicon-save blue"></i>收信</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="glyphicon glyphicon-list-alt yellow"></i>通讯录</a>
+                    </li>
+                </ul>
+
+                <ul class="nav nav-pills nav-stacked" role="tablist">
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-envelope red"></i>
+                            <span class="badge pull-right">42</span>
+                            收件箱
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-star-empty"></i>
+                            <span class="badge pull-right">3</span>
+                            星级邮件
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-user"></i>
+                            群邮件
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-file"></i>
+                            草稿箱
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-send"></i>
+                            已发送
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="del">
+                            <i class="glyphicon glyphicon-remove-circle"></i>
+                            已删除
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-trash"></i>
+                            垃圾箱
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-10 list">
+                <div class="inbox-info">收件箱(共96封,其中<a href="">未读邮件</a>42封)</div>
+                <div class="btn-box" role="group" aria-label="...">
+                    <button type="button" class="btn btn-default del-btn">删除</button>
+                    <button type="button" class="btn btn-default">彻底删除</button>
+                    <button type="button" class="btn btn-default">转发</button>
+                    <button type="button" class="btn btn-default">举报</button>
+                    <button type="button" class="btn btn-default">全部标记为已读</button>
+
+                    <!-- Single button -->
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            标记为... <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            移动到... <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="select-all-box">
+                    <input type="checkbox" class="select-all">
+                    <i class="glyphicon glyphicon-envelope"></i>
+                    <i class="glyphicon glyphicon-paperclip"></i>
+                </div>
+                <ul class="email-list"></ul>
+                <span class="tooltip hidden">选中0封邮件</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/emi.js"></script>
+    <script src="js/email.js"></script>
+</body>
+</html>

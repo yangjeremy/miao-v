@@ -1,0 +1,174 @@
+body{
+    background-color: #5b1c2a;
+    font-size: 14px;
+}
+
+.head{
+    padding: 16px 40px 0 20px;
+}
+
+.hire-box{
+    width: 700px;
+    background-color: #20242d;
+    border-radius: 10px;
+    margin: 50px auto;
+    overflow: hidden;
+    border: 2px solid #232b34;
+    color: #b9bdd4;
+    padding-bottom: 20px;
+}
+
+.logo{
+    width: 182px;
+    height: 70px;
+    background: url("../img/logo.png") 0 0 no-repeat;
+}
+
+.list .type{
+    width: 80px;
+    height: 340px;
+    border-right: 2px solid #2d323e;
+    color: #b9bdd4;
+    text-align: right;
+    padding: 20px 15px 0 0;
+}
+
+.list .type li{
+    margin-bottom: 30px;
+}
+
+.list a{
+    font-size: 14px;
+    color: #b9bdd4;
+}
+
+.type .active a {
+    color: #b03047;
+}
+
+.info{
+    width: 600px;
+}
+
+.hire .info li{
+    padding: 20px;
+    border-bottom: 2px dashed #272b34;
+    position: relative;
+}
+
+.hire .info li:hover {
+    background: #1c1e25;
+}
+
+.hire .info li:hover:before{
+    content: '';
+    display: block;
+    width: 3px;
+    height: 40px;
+    background: #8f2437;
+    position: absolute;
+    left: -2px;
+    top: 20px;
+}
+
+.hire .info li:hover .num {
+    color: #8f2437;
+}
+
+.info .num {
+    width: 10%;
+    font-size: 30px;
+}
+
+.info .brief {
+    width: 66%;
+}
+
+.info .detail {
+    width: 20%;
+    margin-left: 3%;
+    text-align: center;
+}
+
+.info .detail a{
+    display: block;
+}
+
+.info .brief div{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.pagination{
+    padding-top: 20px;
+    text-align: center;
+}
+
+.pagination .active {
+    background: cadetblue;
+    border-radius: 15px;
+    padding: 5px 10px;
+    color: #fff;
+}
+
+.pagination a{
+    color: #b9bdd4;
+    padding: 0 10px;
+}
+
+.detail .content {
+    padding: 0 40px 0 30px;
+    box-sizing: border-box;
+}
+
+.detail h3{
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.detail .intro{
+    line-height: 14px;
+}
+
+.detail .title{
+    padding-bottom: 16px;
+    border-bottom: 2px dashed #333843;
+}
+
+.detail .info {
+    padding-top: 16px;
+}
+
+.detail .publish-date{
+    font-size: 12px;
+    color: #4d5362;
+}
+
+.detail .sub-title{
+    color: #a5abbc;
+    margin-bottom: 4px;
+}
+
+.detail ul{
+    color: #656a7b;
+    margin-bottom: 20px;
+}
+
+.detail ul li{
+    line-height: 24px;
+}
+
+.detail .toolbar a {
+    color: #b03047;
+    margin-left: 20px;
+}
+
+.detail .toolbar .resume{
+    padding: 8px 30px;
+    border-radius: 20px;
+    border: 2px solid #8f2437;
+    display: inline-block;
+}
+
+

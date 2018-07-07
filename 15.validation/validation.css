@@ -1,0 +1,83 @@
+/* css reset */
+body{
+    margin: 0;
+}
+
+input {
+    border: none;
+    background: none;
+    padding: 0;
+    outline: none;
+}
+
+.box {
+    width: 460px;
+    height: 200px;
+    background-color: #de4965;
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+
+.line {
+    margin-top: 50px;
+    text-align: center;
+    position: relative;
+}
+
+label {
+    color: #fff;
+}
+
+.form-controller {
+    width: 170px;
+    height: 40px;
+    padding-left: 10px;
+    border: 2px solid #ccc;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.form-controller:focus {
+    border: 2px solid #696ecf;
+}
+
+.btn-validate {
+    width: 60px;
+    height: 44px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.msg {
+    height: 20px;
+    padding: 10px;
+    line-height: 20px;
+    color: #fef86b;
+    background-color: #91446f;
+    border-radius: 5px;
+    position: absolute;
+    top: 60px;
+    left: 160px;
+}
+
+.msg:before {
+    content: '';
+    width: 0;
+    height:0;
+    border: 10px dashed transparent;
+    border-bottom: 10px solid #91446f;
+    position: absolute;
+    left: 5px;
+    top: -18px;
+}
+
+.show {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}

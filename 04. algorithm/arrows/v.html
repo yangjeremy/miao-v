@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    div {
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        color: #fff;
+        text-align: center;
+        line-height: 50px;
+        position: absolute;
+    }
+</style>
+<body>
+
+<script>
+    var box = document.body;
+    for (var i = 0; i < 21; i++) {
+        box.innerHTML += '<div style="left:'+i*50+'px;top:'+(2-Math.abs(2-i%4))*50+'px;">'+ (2-Math.abs(2-i%4))+'</div>';
+    }
+
+</script>
+</body>
+</html>

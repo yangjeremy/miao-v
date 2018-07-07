@@ -1,0 +1,86 @@
+/* css reset */
+body{
+    margin: 0;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.clearfix{
+    *zoom: 1;
+}
+
+.clearfix:after{
+    content:'';
+    display: block;
+    clear: both;
+}
+
+input {
+    background: none;
+    border: none;
+    outline: none;
+}
+/* content start */
+.carousel {
+    width: 960px;
+    height: 402px;
+    margin: 50px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.box li{
+    float: left;
+}
+
+
+.carousel .btn {
+    width: 35px;
+    height: 35px;
+    background-image: url("img/sprite-btn.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 180px;
+    cursor: pointer;
+    opacity: .3;
+}
+
+.carousel:hover {
+    opacity: .8;
+}
+
+.btn-group .prev {
+    background-position: 0 0;
+    left: 10px;
+}
+
+.btn-group .next {
+    background-position: -50px 0;
+    right: 10px;
+}
+
+.dot-group {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.dot-group li {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: #ccc;
+    margin-right: 10px;
+    transition: 1s;
+}
+
+.dot-group .active {
+    height: 40px;
+}
+

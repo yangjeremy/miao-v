@@ -1,0 +1,144 @@
+body{
+    background: rgba(0,0,0,.6);
+    font-family: 'Arial', "微软雅黑";
+}
+
+.popup{
+    padding: 32px 32px 34px;
+    border-radius: 4px;
+    background: #fff;
+    position: absolute;
+    box-sizing: border-box;
+}
+
+.popup .left{
+    padding-right: 32px;
+    border-right: 1px solid #ddd;
+    margin-right: 29px;
+}
+
+.popup .heading h3{
+    font-size: 28px;
+    line-height: 30px;
+    color: #404040;
+    margin-right: 8px;
+}
+
+.popup .heading span{
+    font-size: 14px;
+    line-height: 18px;
+    color: #ff601b;
+    padding-top: 12px;
+}
+
+.popup .heading{
+    margin-bottom: 23px;
+}
+
+.popup .login-group{
+    margin-bottom: 20px;
+}
+
+.popup .login-group .btn{
+    width: 136px;
+    height: 40px;
+}
+
+.popup .login-group .weibo-login{
+    background: url("../img/weibo-login.png") no-repeat 0 0;
+    margin-right: 16px;
+}
+
+.popup .login-group .qq-login{
+    background: url("../img/qq-login.png") no-repeat 0 0;
+}
+
+.popup .login-group .qq-login{
+    background: url("../img/qq-login.png") no-repeat 0 0;
+    margin-right: 18px;
+}
+
+.popup .login-group .other-login{
+    width: 14px;
+    height: 24px;
+    background: url("../img/right-arrow.png") no-repeat 0 0;
+    margin-top: 8px;
+}
+
+.login-form .form-control{
+    width: 310px;
+    height: 38px;
+    padding-left: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.login-form .submit-btn{
+    width: 320px;
+    height: 40px;
+    background-color: #ff6600;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.login-form .links{
+    margin-bottom: 51px;
+}
+
+.login-form .links li{
+    height: 14px;
+    line-height: 14px;
+    font-size: 12px;
+    color: #404040;
+    border-right: 1px solid #ccc;
+}
+
+.login-form .links li:nth-child(1){
+    width: 108px;
+}
+
+.login-form .links li:nth-child(2){
+    width: 120px;
+    text-align: center;
+}
+
+.login-form .links li:nth-child(3){
+    width: 90px;
+    text-align: right;
+    border-right: none;
+}
+
+.right{
+    text-align: center;
+}
+
+.right .qr-title{
+    line-height: 16px;
+    font-size: 14px;
+    margin-bottom: 31px;
+    margin-top: 53px;
+}
+
+.right .text{
+    display: block;
+    margin-top: 16px;
+    background: #eee;
+    width: 172px;
+    height: 26px;
+    line-height: 26px;
+    border-radius: 13px;
+    font-size: 12px;
+}
+
+.close {
+    width: 32px;
+    height: 32px;
+    background: url("../img/close.png") no-repeat 0 0;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}

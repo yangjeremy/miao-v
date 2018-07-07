@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .cartoon{
+            width: 100px;
+            height: 100px;
+            background: url("img/cartoon.png") no-repeat 0 0;
+            position: absolute;
+        }
+
+        .left-up{
+            background-position: 0 0;
+        }
+
+        .up{
+            background-position: -100px 0;
+         }
+
+        .right-up{
+            background-position: -200px 0;
+        }
+
+        .left{
+            background-position: 0 -100px;
+        }
+
+        .middle{
+            background-position: -100px -100px;
+        }
+
+        .right{
+            background-position: -200px -100px;
+        }
+
+        .left-down{
+            background-position: 0 -200px;
+        }
+
+        .down{
+            background-position: -100px -200px;
+        }
+
+        .right-down{
+            background-position: -100px -200px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="cartoon middle"></div>
+    <script>
+        var cartoon = document.querySelector('.cartoon');
+
+        //初始化卡通人物的位置，上下左右居中
+        var cleft = (window.innerWidth - cartoon.offsetWidth)/2;
+        var ctop = (window.innerHeight - cartoon.offsetHeight)/2;
+
+        cartoon.style.left = cleft+'px';
+        cartoon.style.top = ctop+'px';
+
+        var leftonoff = false;
+        var rightonoff = false;
+        var toponoff = false;
+        var bottomonoff = false;
+
+
+        var lt = 0;
+
+
+        document.onkeydown = function(ev){
+            //向左移动
+            var ev = ev || event;
+            if(ev.keyCode === 37){
+                if(leftonoff) return;
+                leftonoff = true;
+                lt++;
+                cartoon.className = 'cartoon left';
+
+                clearInterval(cartoon.leftTimer);
+
+                cartoon.leftTimer = setInterval(function(){
+                    var left = cartoon.offsetLeft - 10;
+                    if(left < 0){
+                        left = 0;
+                        clearInterval(cartoon.leftTimer);
+                    }
+                    cartoon.style.left = left + 'px';
+                },30);
+            }
+
+            //向右移动
+            if(ev.keyCode === 39){
+                if(rightonoff) return;
+                rightonoff = true;
+                cartoon.className = 'cartoon right';
+
+                clearInterval(cartoon.rightTimer);
+
+                cartoon.rightTimer = setInterval(function(){
+                    var right = cartoon.offsetLeft + 10;
+                    if(right > window.innerWidth - cartoon.offsetWidth){
+                        right = window.innerWidth - cartoon.offsetWidth;
+                        clearInterval(cartoon.rightTimer);
+                    }
+                    cartoon.style.left = right + 'px';
+                },30);
+
+            }
+
+
+            //向上移动
+            if(ev.keyCode === 38){
+                if(toponoff) return;
+                toponoff = true;
+                lt++;
+                cartoon.className = 'cartoon up';
+
+                clearInterval(cartoon.topTimer);
+
+                cartoon.topTimer = setInterval(function(){
+                    var top = cartoon.offsetTop - 10;
+                    if(top < 0){
+                        top = 0;
+                        clearInterval(cartoon.topTimer);
+                    }
+                    cartoon.style.top = top + 'px';
+                },30);
+                cartoon.style.top = cartoon.offsetTop - 10 + 'px';
+
+            }
+
+            //向下移动
+            if(ev.keyCode === 40){
+                if(bottomonoff) return;
+                bottomonoff = true;
+                cartoon.className = 'cartoon down';
+
+                clearInterval(cartoon.downTimer);
+
+                cartoon.downTimer = setInterval(function(){
+                    var down = cartoon.offsetTop + 10;
+                    if(top > window.innerHeight - cartoon.offsetHeight){
+                        top = window.innerHeight - cartoon.offsetHeight;
+                        clearInterval(cartoon.downTimer);
+                    }
+                    cartoon.style.top = down + 'px';
+                },30);
+
+            }
+
+            console.log(lt);
+
+            //左上角
+            if(lt==2){
+                cartoon.className = 'cartoon left-up';
+            }
+
+
+//            //右上角
+//            if(ev.keyCode === 39 && ev.keyCode === 38){
+//                cartoon.className = 'cartoon right-up';
+//            }
+//
+//            //左下角
+//            if(ev.keyCode === 38 && ev.keyCode === 40){
+//                cartoon.className = 'cartoon left-down';
+//            }
+//
+//            //右下角
+//            if(ev.keyCode === 39 && ev.keyCode === 40){
+//                cartoon.className = 'cartoon right-down';
+//            }
+        };
+
+
+
+        document.onkeyup = function(ev){
+
+            if(ev.keyCode==37){
+                leftonoff = false;
+                clearInterval(cartoon.leftTimer);
+                lt--;
+            }
+
+            if(ev.keyCode==38){
+                toponoff = false;
+                clearInterval(cartoon.topTimer);
+                lt--;
+            }
+
+
+            cartoon.className = 'cartoon middle';
+            clearInterval(cartoon.rightTimer);
+            clearInterval(cartoon.downTimer);
+
+
+
+            rightonoff = false;
+            toponoff = false;
+            bottomonoff = false;
+        }
+    </script>
+</body>
+</html>

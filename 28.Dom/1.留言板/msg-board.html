@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>留言板</title>
+    <style>
+        body{
+            margin: 0;
+            background-color: #c1e2b3;
+        }
+
+        ul{
+            text-align: left;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .box{
+            border: 2px solid #0a8cd2;
+            border-radius: 10px;
+            width: 400px;
+            height: 500px;
+            margin: 50px auto;
+            background-color: whitesmoke;
+            text-align: center;
+
+        }
+
+        .text{
+            width: 310px;
+            height: 60px;
+            border: 1px solid #0a8cd2;
+            border-radius: 5px;
+            resize: none;
+            margin: 20px 0 10px;
+            padding: 20px;
+        }
+
+        .submit{
+            width: 80px;
+            height: 30px;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            background: #0c8f44;
+            color: #fff;
+            text-align: center;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .msg{
+            margin-top: 20px;
+            overflow: scroll;
+            height: 280px;
+        }
+
+        .msg li .bubble{
+            padding: 10px;
+            background: purple;
+            color: white;
+            border-radius: 8px;
+            position: relative;
+            margin-bottom: 10px;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 20px;
+            word-break: break-all;
+        }
+
+        .msg .bubble:before{
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border: 6px solid whitesmoke;
+            border-right: 6px solid purple;
+            left: -12px;
+            top: 14px;
+        }
+
+        .rico{
+            width: 35px;
+            height: 40px;
+            background: url("img/rico.png") no-repeat 0 0;
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .lico{
+            width: 35px;
+            height: 40px;
+            background: url("img/lico.png") no-repeat 0 0;
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <textarea class="text"></textarea>
+    <input type="button" value="提交" class="submit"></input>
+    <ul class="msg"></ul>
+</div>
+
+<script>
+    var text = document.querySelector('.text');
+    var btn = document.querySelector('.submit');
+    var ul = document.querySelector('.msg');
+
+    var name = 'rico';
+
+    btn.onclick = function(){
+        var msg = text.value;
+        if(msg.trim()==''){
+            alert('输入内容不能为空');
+        }else{
+            var li = document.createElement('li');
+
+            var avatar = document.createElement('span');
+
+            var bubble = document.createElement('span');
+
+            bubble.className = 'bubble';
+            bubble.innerHTML = msg;
+
+            if(name==='rico'){
+
+                name='lico';
+
+            }else{
+
+                name='rico';
+            }
+
+            avatar.className = name;
+
+            li.appendChild(avatar);
+            li.appendChild(bubble);
+
+            ul.insertBefore(li,ul.firstElementChild);
+            text.value='';
+        }
+    }
+</script>
+
+</body>
+</html>

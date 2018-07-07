@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/select.css">
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <div class="box">
+        <div class="item">
+            <h2>Vue实现的自定义的下拉框</h2>
+            <custom-select btn-value="查询" :list="list1"></custom-select>
+        </div>
+        <div class="item">
+            <h2>Vue实现的自定义的下拉框</h2>
+            <custom-select btn-value="搜索" :list="list2"></custom-select>
+        </div>
+    </div>
+
+    <script>
+        Vue.component('custom-select',{
+            data:function(){
+                return {
+                    selectShow:false,
+                    val:''
+                };
+            },
+            props:['btnValue','list'],
+            template:`<div><div class="select clearfix">
+                                <input type="text" class="fl" @click="selectShow=!selectShow" :value="val">
+                                <input type="button" class="fl" :value="btnValue">
+                            </div>
+                            <custom-list v-show="selectShow" :list="list" @receive="changeValueHandle"></custom-list>
+                      </div>`,
+            methods:{
+                changeValueHandle(value){
+                    this.val = value;
+                }
+            }
+        });
+
+        Vue.component('custom-list',{
+            props:['list'],
+            template:`<ul class="dropdown">
+                        <li v-for="item of list" @click="selectValueHandle(item)">{{item}}</li>
+                      </ul>`,
+            methods:{
+                selectValueHandle(item){
+                    this.$emit('receive',item);
+                }
+            }
+        });
+        new Vue({
+            el:'.box',
+            data:{
+                list1:['html+css','html5+css3','javascript','angular','react','vue','jquery','nodejs'],
+                list2:['北京','上海','广州','深圳','武汉','成都']
+            }
+        });
+    </script>
+</body>
+</html>

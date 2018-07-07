@@ -1,0 +1,121 @@
+body{
+    background-color: #0cc65b;
+}
+
+.box{
+    width: 1000px;
+    margin: 50px auto;
+}
+
+.msg-box{
+    width: 400px;
+    height: 400px;
+    margin: 50px;
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.msg-box textarea{
+    width: 100%;
+    height: 120px;
+    border: none;
+    margin-bottom: 10px;
+    text-indent: 2em;
+    padding: 6px;
+    box-sizing: border-box;
+}
+
+.msg-box .submit-btn{
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    font-size: 14px;
+    color: #fff;
+}
+
+.content{
+    margin-top: 10px;
+    height: 180px;
+    overflow: scroll;
+}
+
+.content li{
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.content a{
+    width: 50px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 4px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 9px;
+    text-align: center;
+    font-size: 12px;
+}
+
+
+.theme-blue{
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.theme-blue textarea{
+    background-color: #e4f6fd;
+    border-radius: 10px;
+}
+
+.theme-blue .submit-btn{
+    background-color: #2baef3;
+    border-radius: 6px;
+}
+
+.theme-blue li{
+    background-color: #e4f6fd;
+    border-radius: 6px;
+}
+
+.theme-blue .content a {
+    background-color: transparent;
+    border: 1px solid #2baef3;
+    color: #2baef3;
+}
+
+.theme-blue .content a:hover{
+    background-color: #2baef3;
+    color: #fff;
+}
+
+.theme-red{
+    background-color: rgba(222,74,99,.7);
+}
+
+.theme-red textarea{
+    background-color: #fff;
+}
+
+.theme-red .submit-btn{
+    background-color: #de4a63;
+    border-radius: 20px;
+}
+
+.theme-red li{
+    background: rgba(255,255,255,.8);
+    margin-bottom: 0;
+}
+
+.theme-red li:hover{
+    background: #fff;
+}
+
+.theme-red a{
+    border: 1px solid #de4a63;
+    border-radius: 10px;
+    color: #de4a63;
+}
+

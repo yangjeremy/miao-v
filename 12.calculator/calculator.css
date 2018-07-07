@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    background-color: #dda3b3;
+}
+
+ul  {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+input {
+    padding: 0;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+input[type=button]{
+    width: 40px;
+    height: 40px;
+    background-color: #252827;
+    border: 3px solid #998b87;
+    border-radius: 5px;
+    vertical-align: top;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    line-height: 34px;
+}
+
+.box {
+    width: 478px;
+    height: 590px;
+    background: url("img/calculator-bg.png") no-repeat 0 0;
+    margin: 30px auto;
+    overflow: hidden;
+    color: #7b7c7c;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.list {
+    margin: 140px auto 0;
+    width: 420px;
+}
+
+.list li {
+    margin-bottom: 20px;
+    vertical-align: top;
+}
+
+.num {
+    width: 34px;
+    height: 34px;
+    border: 3px solid #8c8c8c;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 6px;
+    background: #fff;
+    line-height: 34px;
+    font-weight: bold;
+}
+
+.info {
+    line-height: 30px;
+    padding: 5px 15px;
+    background-color: #000;
+    display: inline-block;
+    margin-left: 15px;
+    width: 220px;
+    border-radius: 10px;
+}
+
+.result {
+    padding: 40px;
+}
+
+.result div {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.white-box {
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    background: #fff;
+    border-radius: 5px;
+    vertical-align: middle;
+    margin: 0 5px 10px;
+    text-align: center;
+    line-height: 30px;
+}

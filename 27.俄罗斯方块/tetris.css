@@ -1,0 +1,15 @@
+/* css reset */
+body{
+    margin: 0;
+}
+
+
+.box{
+    width: 500px;
+    height: 500px;
+    margin: 50px auto;
+}
+
+#canvas {
+    background-color: #000;
+}

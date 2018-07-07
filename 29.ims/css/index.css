@@ -1,0 +1,182 @@
+body{
+    background-color: #00CCFF;
+}
+
+/*****form*****/
+.form{
+    background-color: #fff;
+    width: 400px;
+    height: 180px;
+    border-radius: 10px;
+    margin: 40px auto;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.input-group{
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    height: 50px;
+    position: relative;
+}
+
+label{
+    display: inline-block;
+    width: 30px;
+}
+
+.form-control{
+    border: 2px solid #00CCFF;
+    border-radius: 20px;
+    width: 100px;
+    height: 30px;
+    padding-left: 10px;
+    line-height: 26px;
+    box-sizing: border-box;
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.btn{
+    background-color: #00ccff;
+    color: #fff;
+    padding-left: 0;
+    cursor: pointer;
+}
+
+.gender-select{
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    position: relative;
+}
+
+.gender-select:after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 5px solid #fff;
+    border-top: 5px solid #00ccff;
+    right: 10px;
+    top: 10px;
+}
+
+ .gender-options{
+    position: absolute;
+    top: 32px;
+    width: 88px;
+    text-align: center;
+     left: 40px;
+    border-radius: 20px;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    font-size: 12px;
+    padding-left: 12px;
+    height: 0;
+     z-index: 999;
+     overflow: hidden;
+}
+
+.gender-options span{
+    width: 25px;
+    text-align: left;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.gender{
+    position: relative;
+}
+
+.error{
+    font-size: 12px;
+    color: red;
+    position: absolute;
+    left: 40px;
+    top: 32px;
+    white-space: nowrap;
+}
+
+/******table*******/
+.table{
+    width: 400px;
+    margin: 20px auto;
+    border-collapse:collapse;
+    font-size: 12px;
+}
+
+.checkbox {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #00CCFF;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.checkbox.checked{
+    background-color: #ffc300;
+}
+
+thead{
+    background-color: #0a8cd2;
+    color: #fff;
+}
+
+thead th:nth-child(1){
+    width: 15%;
+    text-align: left;
+}
+
+thead th:nth-child(2){
+    width: 10%;
+}
+
+thead th:nth-child(3){
+    width: 20%;
+}
+
+thead th:nth-child(4){
+    width: 15%;
+}
+
+thead th:nth-child(5){
+    width: 15%;
+}
+
+thead th:nth-child(6){
+    width: 25%;
+}
+
+thead th, tbody td{
+    padding: 5px;
+    text-align: center;
+}
+
+tbody td:nth-child(1){
+    text-align: left;
+}
+
+tbody tr{
+    border: 2px solid #00CCFF;
+}
+
+
+tbody td {
+    background-color: #fff;
+}
+
+.operation input{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    background-color: #00CCFF;
+    color: #fff;
+    cursor: pointer;
+    margin: 2px;
+}

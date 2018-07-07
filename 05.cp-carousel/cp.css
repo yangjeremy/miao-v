@@ -1,0 +1,87 @@
+/* reset css */
+body {
+    margin: 0;
+    background-color: #f3ece6;
+}
+
+input {
+    padding: 0;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* content */
+.album {
+    width: 700px;
+    height: 500px;
+    margin: 50px auto;
+}
+
+.reba {
+    width: 300px;
+    float: left;
+    transform: rotate(-20deg);
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+}
+
+.luhan {
+    width: 300px;
+    float: left;
+    margin-left: 50px;
+    transform: rotate(10deg);
+    margin-top: 30px;
+    background-color: #fff;
+}
+
+.box {
+    border: 3px solid #999;
+    text-align: center;
+}
+
+img {
+    width: 250px;
+    margin: 30px auto 10px;
+    border: 1px solid #999;
+    cursor: pointer;
+}
+
+span {
+    display: block;
+    margin-bottom:70px;
+    text-align: right;
+    margin-right: 25px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.btn-group {
+    text-align: center;
+}
+
+.btn-group input {
+    width: 80px;
+    height: 30px;
+    -webkit-appearance: none;
+    background-color: #ff6705;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.i {
+    font-size: 60px;
+    font-weight: bold;
+    color: #1b6d85;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}

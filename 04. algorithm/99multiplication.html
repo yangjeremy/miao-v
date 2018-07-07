@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>九九乘法表</title>
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 30px;
+        }
+        #box div {
+            display: inline-block;
+            padding: 5px;
+            border: 1px solid orange;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>九九乘法口诀</h1>
+    <ul id="box"></ul>
+
+<script>
+    for(var i = 1; i < 10; i++){
+
+        for (var j = 1; j <= i; j++){
+            box.innerHTML += '<div>'+j +'x'+i+'='+i*j+'</div>';
+        }
+        box.innerHTML+='<br>';
+    }
+
+    box.innerHTML+='<br><br><br>';
+
+    for(var m = 9; m > 0; m--){
+        for (var n = 1; n <=m; n++){
+            box.innerHTML += '<div>'+n +'x'+m+'='+n*m+'</div>';;
+        }
+        box.innerHTML+='<br>';
+    }
+</script>
+</body>
+</html>

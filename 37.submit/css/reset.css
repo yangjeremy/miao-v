@@ -1,0 +1,108 @@
+/* 重置样式 */
+body, h1, h2, h3, h4, h5, p, dl, dd{
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: normal;
+}
+
+body {
+    font-size: 14px;
+    font-family: "microsoft yahei", sans-serif;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    vertical-align: top;
+}
+
+a{
+    text-decoration: none;
+}
+
+img {
+    vertical-align: top;
+    border: none;
+}
+
+input {
+    padding: 0;
+    border: 0;
+    outline: none;
+}
+
+input[type=button]{
+    cursor: pointer;
+}
+
+em {
+    font-style: normal;
+}
+
+
+
+/* margin、padding、浮动、清浮动 */
+
+.fl{
+    float: left;
+}
+
+.fr{
+    float: right;
+}
+
+.tc {
+    text-align: center;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.mr10 {
+    margin-right: 10px;
+}
+
+.mr0 {
+    margin-right: 0 !important;
+}
+
+.no-border {
+    border: none !important;
+}
+
+.em {
+    color: #3d3d3d !important;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.show {
+    display: block !important;
+}
+
+.clearfix{
+    *zoom:1;
+}
+
+.clearfix:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+textarea{
+    outline: none;
+    resize: none
+}
+
+
+

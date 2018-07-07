@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+}
+
+h3{
+    margin: 0;
+}
+
+ul{
+    padding: 0;
+    list-style: none;
+    width: 500px;
+    margin: 50px auto;
+    position: relative;
+    height: 350px;
+}
+
+li{
+    width: 400px;
+    height: 60px;
+    line-height: 60px;
+    vertical-align: top;
+    background: bisque;
+    border-radius: 20px;
+    padding: 0 10px 0 20px;
+    margin-bottom: 10px;
+}
+
+h3{
+    float: left;
+    width: 100px;
+    display: inline-block;
+}
+
+input{
+    border: 2px solid deeppink;
+    border-radius: 4px;
+    color: deeppink;
+    background: transparent;
+    width: 80px;
+    height: 40px;
+    font-size: 16px;
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    outline: none;
+}
+

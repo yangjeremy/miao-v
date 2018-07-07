@@ -1,0 +1,57 @@
+
+.content {
+    width: 800px;
+    border: 1px solid #0cc65b;
+    margin: 50px auto;
+}
+
+.filter-box {
+    background-color: #fffce9;
+    height: 40px;
+    padding-left: 15px;
+}
+
+.filter-box .title{
+    line-height: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.box {
+    padding: 10px 20px;
+    background-color: #FFFDFE;
+}
+
+.box li a {
+    text-decoration: none;
+    margin: 10px 15px;
+    display: inline-block;
+}
+
+.box li .active{
+    color: red;
+}
+
+.box li{
+    border-bottom: 1px dashed #0a8cd2;
+}
+
+.box li:nth-last-child(1){
+    border-bottom: none;
+}
+
+.filter div{
+    float: left;
+    border: 2px solid #0a8cd2;
+    margin: 4px;
+    padding-left: 5px;
+}
+
+.filter div span{
+    background-color: #0a8cd2;
+    color: #fff;
+    display: inline-block;
+    padding: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}

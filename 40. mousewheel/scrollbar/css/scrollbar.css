@@ -1,0 +1,76 @@
+.box{
+    width: 500px;
+    height: 400px;
+    position: relative;
+    margin: 100px auto;
+}
+
+.content{
+    width: 480px;
+    float: left;
+    background-color: #fffce9;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 20px solid #fffce9;
+    position: absolute;
+}
+
+.content p{
+    position: absolute;
+    width: 440px;
+}
+
+.scroll-bar{
+    width: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #1C9ABE;
+    height: 100%;
+}
+
+.slider{
+    width: 20px;
+    height: 40px;
+    background-color: #00ffea;
+    cursor: pointer;
+    position: absolute;
+}
+
+.btn-box{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    background-color: lavender;
+    cursor: pointer;
+}
+
+.up-btn{
+    top: -20px;
+}
+
+.up-triangle{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 5px solid lavender;
+    border-bottom: 5px solid #000;
+    left: 5px;
+    top: 3px;
+}
+
+.down-btn{
+    bottom:-20px;
+}
+
+.down-triangle{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 5px solid lavender;
+    border-top: 5px solid #000;
+    left: 5px;
+    bottom: 3px;
+}

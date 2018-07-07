@@ -1,0 +1,55 @@
+/* css reset*/
+body {
+    margin: 0;
+    background-color: #ede0de;
+}
+
+.score-panel {
+    width: 460px;
+    height: 200px;
+    background-color: #fefefe;
+    border-radius: 10px;
+    margin: 100px auto;
+}
+
+.content {
+    height: 140px;
+    text-align: center;
+}
+
+.title {
+    padding-top: 15px;
+}
+
+.tips {
+    height: 60px;
+    background-color: #de4a63;
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    font-size: 18px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.stars {
+    margin-top: 15px;
+}
+
+.feedback {
+    width: 60px;
+    height: 30px;
+    background-color: #de4a63;
+    border-radius: 5px;
+    vertical-align: bottom;
+    margin-left: 10px;
+    color: #fff;
+    line-height: 30px;
+    text-align: center;
+    visibility: hidden;
+    display: inline-block;
+}
+
+.star {
+    cursor: pointer;
+}

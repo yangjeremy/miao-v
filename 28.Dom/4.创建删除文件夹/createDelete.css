@@ -1,0 +1,55 @@
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.smile.active{
+    border: 2px solid #0a8cd2;
+    border-radius: 5px;
+}
+
+.active .checkbox{
+    display: block;
+}
+
+.smile{
+    display: inline-block;
+    position: relative;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid #fff;
+    margin: 20px;
+}
+
+.smile span{
+    display: block;
+}
+
+.checkbox{
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    display: none;
+    cursor: pointer;
+}
+
+input[type=button]{
+    -webkit-appearance: none;
+    width: 100px;
+    height: 40px;
+    border: 2px solid #0a8cd2;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #00a8ff;
+}
+
+.btn-group{
+    text-align: center;
+}
+
+.box{
+    min-height: 300px;
+}

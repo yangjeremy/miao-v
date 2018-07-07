@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    background-color: #5b344b;
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.music-panel {
+    width: 500px;
+    height: 320px;
+    background: #fff;
+    border-radius: 10px;
+    margin: 50px auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.name {
+    float: left;
+    width: 80%;
+    padding-left: 15px;
+}
+
+.singer {
+    float: right;
+    padding-right: 15px;
+}
+
+li {
+    height: 32px;
+    vertical-align: middle;
+    line-height: 32px;
+    border-bottom: 1px dashed #ccc;
+}
+
+li.red {
+    background: #e76a81;
+    color: #fff;
+}
+
+li.pink {
+    background: #f7c5ce;
+    color: #0f0f0f;
+}
+
+li.white {
+    background: white;
+    color: #0f0f0f;
+}
+
+.tool {
+    border-top: 1px dashed #ccc;
+    padding-top: 10px;
+    height: 30px;
+    padding-left: 15px;
+}
+
+input, label {
+    float: left;
+}
+
+label {
+    width: 90%;
+}
+
+.list input {
+    position: relative;
+    top: 6px;
+}

@@ -1,0 +1,190 @@
+/* css reset */
+body {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+input {
+    padding: 0;
+    border: 0;
+    outline: none;
+}
+
+img{
+    vertical-align: top;
+    border: none;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+/* content start */
+.container {
+    width: 600px;
+    height: 726px;
+    background: url("img/bg.jpg") no-repeat 0 0;
+    margin: 10px auto 0;
+    overflow: hidden;
+}
+
+.mobile {
+    width: 340px;
+    height: 650px;
+    margin: 36px auto 0;
+    border-radius: 15px;
+    background-color: #e5e3ec;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 10px 10px 10px #8581b1;
+}
+
+.handset-box {
+    text-align: center;
+    height: 44px;
+}
+
+.handset {
+    width: 58px;
+    height: 5px;
+    background-color: #979799;
+    border-radius: 4px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.screen {
+    border: 3px solid  #ababae;
+    width: 304px;
+    height: 534px;
+    margin: 0 auto;
+}
+
+.home-box{
+    text-align: center;
+}
+
+.home-box .home {
+    background: url("img/miaov.png") no-repeat 0 0;
+    width: 50px;
+    height: 40px;
+    margin: 14px auto 0;
+    display: block;
+}
+
+#chat-window{
+    border-bottom: 1px solid #f9f9f9;
+    height: 428px;
+    background-color: #fff;
+    padding: 17px 19px;
+    overflow: auto;
+}
+
+.toolbar {
+    height: 48px;
+    padding-top: 8px;
+    background-color: #e3e3e3;
+    text-align: center;
+    padding-left: 10px;
+}
+
+#user {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#chat {
+    width: 175px;
+    height: 40px;
+    border-radius: 5px;
+    margin-right: 10px;
+    padding-left: 10px;
+    color: #a5a5a7;
+}
+
+#send {
+    font: 14px/40px '微软雅黑';
+    color: #d97389;
+    background: none;
+    cursor: pointer;
+}
+
+li {
+    margin-bottom: 17px;
+}
+
+.bubble {
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    word-break: break-all;
+    max-width: 190px;
+    position: relative;
+}
+
+.lico .bubble {
+    background: #e1e1e1;
+    margin-left: 12px;
+    float: left;
+
+ }
+
+.lico .bubble:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-right: 6px solid #e1e1e1;
+    position: absolute;
+    top: 15px;
+    left: -12px;
+}
+
+.rico .bubble {
+    background: #b2a9c8;
+    margin-right: 12px;
+    color: #fff;
+    float: right;
+}
+
+.rico .bubble:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-left: 6px solid #b2a9c8;
+    position: absolute;
+    top: 15px;
+    right: -12px;
+}
+
+.send{
+    width: 50px;
+    position: relative;
+}
+
+.send #send{
+    width: 50px;
+}
+
+.send select{
+    position: absolute;
+    left: -44px;
+    top: 43px;
+    outline: none;
+}
+/* content start */

@@ -1,0 +1,150 @@
+.container{
+    perspective:800px;
+    margin: 50px auto;
+    width: 600px;
+}
+
+.cube{
+    width: 240px;
+    height: 240px;
+    margin: 200px auto;
+    transform-origin: center center -120px;
+    transform-style: preserve-3d;
+    transform: rotateX(0deg) rotateY(0deg);
+    transition: 1s ease-out;
+}
+
+.cube:hover{transform: rotateY(720deg) rotateX(720deg);}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #000;
+    transform-style: preserve-3d;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    transform-origin: center center -40px;
+}
+
+li{
+    width: 80px;
+    height: 80px;
+    background-color: #a2a2a2;
+    position: absolute;
+    box-sizing: border-box;
+    border:8px solid #000;
+    border-radius: 10px;
+}
+
+li:nth-child(1){
+    top: -80px;
+    left: 0;
+    transform-origin: bottom;
+    transform: rotateX(90deg);
+}
+
+li:nth-child(2){
+    top: 0;
+    left: -80px;
+    transform-origin: right;
+    transform: rotateY(-90deg);
+}
+
+li:nth-child(3){
+    top: 0;
+    left: 0;
+}
+
+li:nth-child(4){
+    top: 0;
+    left: 80px;
+    transform-origin: left;
+    transform: rotateY(90deg);
+}
+
+li:nth-child(5){
+    top: 80px;
+    left: 0;
+    transform-origin: top;
+    transform: rotateX(-90deg);
+}
+
+li:nth-child(6){
+    top: 0;
+    left:0;
+    transform: translateZ(-80px);
+}
+
+
+/* 魔方上色 6个面颜色依次是 */
+/*
+1.yellow
+2. orange
+3.blue
+4.red
+5.white
+6.green*/
+
+/* 1. 当把魔方的每个立方体视为个体，那么买个面的都要上色 */
+.individual li:nth-child(1){
+    background-color: yellow;
+}
+
+.individual li:nth-child(2){
+    background-color: orange;
+}
+
+.individual li:nth-child(3){
+    background-color: blue;
+}
+
+.individual li:nth-child(4){
+    background-color: red;
+}
+
+.individual li:nth-child(5){
+    background-color: white;
+}
+
+.individual li:nth-child(6){
+    background-color: green;
+}
+
+/* 2. 当把魔方视为一个整体时：根据魔方坐标(x,y,z)来上色，看的见的表面是对应的颜色，看不见的地方是灰色*/
+.set ul[data-y="-1"] li:nth-child(1){
+    background-color: yellow;
+}
+
+.set ul[data-x="-1"] li:nth-child(2){
+    background-color: orange;
+}
+
+.set ul[data-z="1"] li:nth-child(3){
+    background-color: blue;
+}
+
+.set ul[data-x="1"] li:nth-child(4){
+    background-color: red;
+}
+
+.set ul[data-y="1"] li:nth-child(5){
+    background-color: white;
+}
+
+.set ul[data-z="-1"] li:nth-child(6){
+    background-color: green;
+}
+
+/*@keyframes spinX {*/
+    /*!* Y轴顺时针旋转 *!*/
+    /*from { transform: translate3d( x y z) rotateX(0); }*/
+    /*to { transform: translate3d( x y z) rotateX(-360deg); }*/
+/*}*/
+
+/*ul {*/
+    /*animation: 5s spinX linear infinite;*/
+/*}*/

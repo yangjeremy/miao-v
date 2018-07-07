@@ -1,0 +1,141 @@
+/* css reset */
+body {
+    margin: 0;
+    background-color: #fbd033;
+}
+
+img {
+    vertical-align: top;
+    border: none;
+}
+
+.clearfix{
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+input {
+    padding: 0;
+    background: none;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* content start */
+.album {
+    width: 498px;
+    height: 344px;
+    background: url("img/bg.jpg") no-repeat 0 0;
+    margin: 150px auto;
+    position: relative;
+}
+
+.photo-frame {
+    width: 264px;
+    height: 220px;
+    position: absolute;
+    top: 56px;
+    left: 151px;
+    overflow: hidden;
+}
+
+.img-box {
+    position: relative;
+}
+
+#img {
+    transition: .5s;
+}
+
+.img-box:hover .btn{
+    opacity: .3;
+}
+
+.btn-box .btn {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 80px;
+    opacity: 0;
+    cursor: pointer;
+    background-color: #fff;
+    font-weight: bold;
+    transition: .5s;
+}
+
+.btn-box .btn:hover {
+    opacity: .8;
+}
+
+.prev {
+    left: 5px;
+}
+
+.next {
+    right: 5px;
+}
+
+.img-box:hover .btn {
+    opacity: .3;
+}
+
+.dot-box {
+    position: absolute;
+    bottom: 6px;
+    right: 40px;
+}
+
+.dot-box li {
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    background-color: #ccc;
+    border-radius: 10px;
+    float: left;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: orange;
+}
+
+.dot-box .thumb {
+    display: none;
+    opacity: .8;
+    transition: .5s;
+    border: 2px solid #000;
+    position: absolute;
+    left: -18px;
+    top: -42px;
+}
+
+.dot-box .thumb:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border: 3px solid transparent;
+    border-top: 3px solid #000;
+    position: absolute;
+    bottom: -8px;
+    left: 20px;
+}
+
+
+

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random</title>
+    <style>
+        body{
+            background-color: #fdf4ab;
+        }
+
+        .box{
+            width: 600px;
+            height: 300px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .btn{
+            width: 100px;
+            height: 40px;
+            background-color: #000;
+            border: none;
+            border-radius: 20px;
+            color: #fff;
+            font-weight: bold;
+            line-height: 40px;
+            text-align: center;
+            padding: 0;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .active {
+            background-color: #bcbada;
+            color: #000;
+        }
+
+        .img-box{
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .img-box div{
+            display: inline-block;
+            border-radius: 5px;
+            margin-right: 20px;
+            margin-top: 20px;
+        }
+
+        .img-box img{
+            border-radius: 5px;
+            border: 1px solid #000;
+        }
+
+        .img-box span{
+            display: block;
+        }
+
+    </style>
+    <script src="emi.js"></script>
+</head>
+<body>
+<div class="box">
+    <div class="btn-group">
+        <input type="button" value="从小到大" class="btn">
+        <input type="button" value="打乱顺序" class="btn">
+    </div>
+
+    <div class="img-box">
+
+    </div>
+</div>
+
+<script>
+    var imgArr = ['img/1.png','img/2.png','img/3.png','img/4.png',
+    'img/5.png','img/6.png','img/7.png','img/yeye.png'];
+
+    var textArr = ['大娃子','二娃子','铁娃子','火娃子','水娃子','隐身娃','小娃子','爷爷'];
+    var len = imgArr.length;
+
+    var arr = [];
+
+
+
+
+
+    var orderBtn = document.querySelectorAll('.btn')[0];
+    var randomBtn = document.querySelectorAll('.btn')[1];
+    var imgBox = document.querySelector('.img-box');
+
+
+
+    for(var i = 0; i < len; i++){
+        imgBox.innerHTML +='<div><img src="'+imgArr[i]+'"><span>'+textArr[i]+'</span></div>';
+        arr.push(i);
+    }
+
+    orderBtn.onclick = function(){
+        imgBox.innerHTML = '';
+        arr.reverse();
+        for(var i = 0; i < len; i++){
+            imgBox.innerHTML +='<div><img src="'+imgArr[arr[i]]+'"><span>'+textArr[arr[i]]+'</span></div>'
+        }
+    };
+
+    randomBtn.onclick = function(){
+        imgBox.innerHTML = '';
+        var newArr = [];
+
+        while(newArr.length < len){
+            var num = Math.floor(Math.random()*8);
+            if(arrIndexOf(newArr,num) == -1){
+                newArr.push(num);
+            }
+        }
+
+        for(var i = 0; i < len; i++){
+            imgBox.innerHTML +='<div><img src="'+imgArr[newArr[i]]+'"><span>'+textArr[newArr[i]]+'</span></div>'
+        }
+    }
+
+
+    
+</script>
+</body>
+</html>

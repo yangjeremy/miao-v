@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>微云-Emi</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/yunpan.css">
+</head>
+<body>
+<!--头部结构-->
+<header id="header" class="main-top clearfix">
+    <div class="logo fl">
+        <h1>
+            <a href="#" class="icon icon-logo">腾讯微云</a>
+        </h1>
+    </div>
+    <div class="normal-toolbar clearfix">
+        <!--数据传输按钮-->
+        <div class="transform fl">
+            <a href="javascript:;">
+                <i class="icon icon-c icon-24 icon-transform"></i>
+            </a>
+        </div>
+        <!--文件搜索框-->
+        <div class="search fl">
+            <!--获得焦点状态添加类名focus -->
+            <i class="icon icon-c icon-24 icon-search"></i>
+            <label class="input-text">输入文件名</label>
+            <input class="mod-input" type="text" autocomplete="off" maxlength="40" tabindex="0">
+            <a class="close hidden" href="javascript: void(0);">
+                <i class="icon icon-close"></i>
+            </a>
+        </div>
+        <!--视图和排序-->
+        <div class="view-item-list fl">
+            <div class="view-item fl">
+                <a class="item-list fl" href="javascript:;" title="列表视图">
+                    <i class="icon icon-c icon-24 icon-list"></i>
+                </a>
+                <a class="item-list cur fl" href="javascript:;" title="缩略图视图">
+                    <i class="icon icon-c icon-24 icon-thumb"></i>
+                </a>
+            </div>
+            <div class="view-item fl">
+                <a class="item-list cur fl" href="javascript:;" title="按时间排序">
+                    <i class="icon icon-c icon-24 icon-time"></i>
+                </a>
+                <a class="item-list fl" href="javascript:;" title="按字母排序">
+                    <i class="icon icon-c icon-24 icon-letter"></i>
+                </a>
+            </div>
+        </div>
+        <!-- +添加 -->
+        <!-- [ATTENTION!!] 切换 .on -->
+        <div class="upload fr">
+            <input id="upload_html5_input" name="file" type="file" multiple="multiple" class="hidden">
+            <label for="upload_html5_input">
+                <span class="btn btn-upload">
+                    <i class="icon icon-24 icon-add"></i><span class="btn-txt">添加</span>
+                </span>
+            </label>
+            <!-- 添加内容 s -->
+            <dv class="mod-bubble-dropdown with-border top-right upload-bubble-dropdown hidden">
+                <ul class="upload-dropdown clearfix">
+                    <li class="upload-item">
+                        <i class="icon-upload icon-upload-file"></i>
+                        <p class="txt">上传文件</p>
+                    </li>
+                    <li class="upload-item">
+                        <i class="icon-upload icon-upload-dir"></i>
+                        <p class="txt">上传文件夹</p>
+                    </li>
+                    <li class="upload-item">
+                        <i class="icon-upload icon-offline-download"></i>
+                        <p class="txt">离线下载</p>
+                    </li>
+                    <li class="upload-item create-file">
+                        <i class="icon-upload icon-create-dir"></i>
+                        <p class="txt">创建文件夹</p>
+                    </li>
+                    <li class="upload-item">
+                        <i class="icon-upload icon-add-note"></i>
+                        <p class="txt">添加笔记</p>
+                    </li>
+                </ul>
+                <b class="bubble-arrow-border"></b>
+                <b class="bubble-arrow"></b>
+            </div>
+            <!-- 添加内容 e -->
+        </div>
+    </div>
+    <div class="edit-toolbar cleafix">
+        <div class="cancel-select-btn-wrap">
+            <a href="javascript:;" class="cancel-select-btn">取消选择</a>
+        </div>
+        <div class="edit-select j-edit-count"><p>选择了<span class="j-edit-count-text">18</span>项</p></div>
+        <!--导航栏编辑按钮 s -->
+        <div class="mod-edit-bar">
+            <ul class="edit-wrap clearfix">
+                <li class="edit-item"><i class="icon icon-share-t"></i><span class="text">分享</span></li>
+                <li class="edit-item"><i class="icon icon-download"></i><span class="text">下载</span></li>
+                <li class="edit-item delete-file"><i class="icon icon-trash-t"></i><span class="text">删除</span></li>
+                <li class="edit-item has-more">
+                    <i class="icon icon-menu-more"></i>
+                    <div class="mod-bubble-dropdown with-border top-right edit-bubble-dropdown hidden">
+                        <ul class="list-dropdown">
+                            <li class="item move-file"><button class="btn-link">移动到</button></li>
+                            <li class="item rename-file"><button class="btn-link">重命名</button></li>
+                            <li class="item"><button class="btn-link">移入保险箱</button></li>
+                        </ul>
+                        <b class="bubble-arrow-border"></b>
+                        <b class="bubble-arrow"></b>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--导航栏编辑按钮 e -->
+    </div>
+</header>
+<!--头部结构end-->
+<!--主体结构start-->
+<div class="layout-body">
+    <div class="layout-body-inner">
+        <div id="aside" class="layout-aside">
+            <div class="aside-head">
+                <div class="avatar">
+                    <a href="javascript:;" class="ava-image"><img src="../img/avatar.png" alt="avatar"></a>
+                </div>
+                <div class="open-account">
+                    <a href="javascript:;">开通会员</a>
+                </div>
+            </div>
+            <div class="aside-body">
+                <!--<dl class="nav">-->
+                    <!--<dt>文件</dt>-->
+                    <!--<dd>-->
+                        <!--<a href="javascript:;">-->
+                            <!--<i class="icon icon-24 icon-all"></i>-->
+                            <!--<span>全部</span>-->
+                        <!--</a>-->
+                    <!--</dd>-->
+                <!--</dl>-->
+            </div>
+        </div>
+        <div class="layout-main">
+            <div class="file-path">
+                <div class="mod-check">
+                    <i class="icon icon-checkall"></i>
+                </div>
+                <!-- 面包屑导航 -->
+                <ul class="breadcrumb clearfix">
+                    <!--<li tabindex="0" class="item cur">-->
+                        <!--<a href="javascript:;">微云</a>-->
+                    <!--</li>-->
+                </ul>
+            </div>
+            <ul class="data-list">
+                <!--<li class="item">-->
+                    <!--<div class="inner">-->
+                        <!--<i class="icon icon-file"></i>-->
+                        <!--<span class="txt" data-name="file_name" title="DOM上移下移">DOM上移下移</span>-->
+                    <!--</div>-->
+                    <!--<i class="icon icon-check"></i>-->
+                <!--</li>-->
+            </ul>
+
+            <!-- 选框-->
+            <div class="drag-box hidden"></div>
+
+            <!-- 右键弹出菜单-->
+            <div class="mod-bubble-menu with-border hidden">
+                <ul>
+                    <li class="menu-item">
+                        <i class="icon icon-24 icon-share"></i>
+                        <span class="txt">分享</span><div class="spliter"></div>
+                    </li>
+                    <li class="menu-item">
+                        <i class="icon icon-24 icon-down"></i>
+                        <span class="txt">下载</span>
+                    </li>
+                    <li class="menu-item move-file" id="move">
+                        <i class="icon icon-24 icon-null"></i>
+                        <span class="txt">移动到</span>
+                    </li>
+                    <li class="menu-item rename-file" id="rename">
+                        <i class="icon icon-24 icon-null"></i>
+                        <span class="txt">重命名</span><div class="spliter"></div>
+                    </li>
+                    <li class="menu-item">
+                        <i class="icon icon-24 icon-null"></i>
+                        <span class="txt">移入保险箱</span><div class="spliter"></div>
+                    </li>
+                    <li class="menu-item delete-file">
+                        <i class="icon icon-24 icon-trash"></i>
+                        <span class="txt">删除</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- 文件移动框 -->
+<div class="move-file-pop popup-center hidden">
+    <h3 class="full-pop-header"><div class="inner __title">选择存储位置</div></h3>
+    <div class="full-pop-content __content">
+        <div class="dirbox-dirs">
+            <div class="dirbox-dir dirbox-curdir">
+                <label>移动到：</label>
+            </div>
+            <div data-id="tree-container" class="dirbox-tree" style="">
+                <ul class="_tree dirbox-tree-body">
+                    <li class="dir-item root">
+                        <a href="#" class="expand">
+                            <span class="ui-text">
+                                <i class="icon-welcome expander"></i>微云
+                            </span>
+                        </a>
+                        <ul class="dirbox-sub-tree">
+                            <!--<li class="dir-item">-->
+                                <!--<a href="#" class="expand">-->
+                                    <!--<span class="ui-text">-->
+                                        <!--<i class="icon-welcome expander"></i>全部-->
+                                    <!--</span>-->
+                                <!--</a>-->
+                                <!--<ul class="dirbox-sub-tree"></ul>-->
+                            <!--</li>-->
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="full-pop-btn">
+        <span class="err"></span>
+        <a class="g-btn g-btn-blue _ok" href="javascript:;" disabled="disabled">
+            <span class="btn-inner disabled">确定</span>
+        </a>
+        <a class="g-btn g-btn-gray _x" href="javascript:;">
+            <span class="btn-inner">取消</span>
+        </a>
+    </div>
+    <a href="javascript:;" class="full-pop-close _x">×</a>
+</div>
+
+<!-- 删除警告框 -->
+<div class="popup-center alert-pop hidden">
+    <h3 class="full-pop-header"><span class="inner _title">删除文件</span></h3>
+    <div class="full-pop-content">
+        <div class="mod-alert"><div class="alert-inner">
+            <i class="icon-welcome icon-alert"></i>
+            <h4 class="title">确定要删除这个文件夹吗？</h4>
+            <p class="info" title="">已删除的文件可以在回收站找到</p>
+        </div></div>
+    </div>
+    <div class="full-pop-btn">
+        <a class="_ok g-btn g-btn-blue" href="javascript:"><span class="btn-inner">确定</span></a>
+        <a class="_x g-btn g-btn-gray" href="javascript:"><span class="btn-inner">取消</span></a>
+    </div>
+    <a href="javascript:;" class="_x full-pop-close">×</a>
+</div>
+<div class="ui-mask hidden"></div>
+<!--主体结构end-->
+    <script src="js/emi.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/yunpan.js"></script>
+</body>
+</html>

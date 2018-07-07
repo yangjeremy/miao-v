@@ -1,0 +1,47 @@
+/* css reset */
+body{
+    margin: 0;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+p{
+    margin: 0;
+}
+
+.carousel{
+    width: 960px;
+    height: 402px;
+    margin: 100px auto;
+    overflow: hidden;
+}
+
+.img-box{
+    height: 402px;
+    margin-left: 0;
+}
+
+.item {
+    width: 960px;
+    height: 402px;
+    float: left;
+    position: relative;
+}
+
+.desc {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    bottom: -60px;
+    left: 0;
+    color: #fff;
+    background-color: rgba(0,0,0,.6);
+    position: absolute;
+}
+
+

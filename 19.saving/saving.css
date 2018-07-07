@@ -1,0 +1,59 @@
+/* css reset */
+body{
+    margin: 20px;
+    background-color: #f2f2f2;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1{
+    text-align: center;
+    margin: 30px 0 400px;
+    padding-bottom: 10px;
+    font-family: 'Arial', "微软雅黑";
+}
+
+img{
+    vertical-align: top;
+    border: none;
+}
+/* content start */
+
+.content {
+    position: relative;
+}
+
+.p-list {
+    text-align: center;
+}
+
+.item{
+    display: inline-block;
+}
+
+.p-list .item {
+    border: 2px solid #ccc;
+    position: relative;
+    cursor: pointer;
+}
+
+.c-list .item{
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    left: 270px;
+    z-index: 1;
+}
+
+.p-list .num {
+    position: absolute;
+    bottom: -40px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+}

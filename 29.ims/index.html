@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>信息管理系统</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="content">
+        <!-- form 表单 -->
+        <form class="form clearfix">
+            <!-- 姓名 -->
+            <div class="input-group">
+                <label for="name">姓名</label>
+                <input type="text" id="name" class="form-control">
+                <span class="name-error error"></span>
+            </div>
+            <!-- 年龄 -->
+            <div class="input-group">
+                <label for="age">年龄</label>
+                <input type="text" id="age" class="form-control">
+                <span class="age-error error"></span>
+            </div>
+            <!-- 性别 -->
+            <div class="input-group">
+                <label for="gender" class="gender-label">性别</label>
+                <div class="form-control gender-select"></div>
+                <div class="gender-options">
+                    <span data-value="男">男</span>
+                    <span data-value="女">女</span>
+                    <span data-value="保密">保密</span>
+                </div>
+                <input type="hidden" class="gender-hidden" id="gender">
+                <span class="gender-error error"></span>
+            </div>
+            <!-- 添加 -->
+            <div class="input-group">
+                <label></label>
+                <input type="button" value="添加" class="btn add form-control">
+            </div>
+        </form>
+        <!-- table 表格 -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th><span class="checkbox all"></span>全选</th>
+                    <th>ID</th>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>性别</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody class="tbody-list">
+                <!--<tr>-->
+                    <!--<td><span class="checkbox"></span></td>-->
+                    <!--<td class='id'>1</td>-->
+                    <!--<td>LEO</td>-->
+                    <!--<td>20</td>-->
+                    <!--<td>男</td>-->
+                    <!--<td class="operation">-->
+                        <!--<input type="button" value="^">-->
+                        <!--<input type="button" value="v">-->
+                        <!--<input type="button" value="x">-->
+                    <!--</td>-->
+                <!--</tr>-->
+            </tbody>
+        </table>
+    </div>
+    <script src="js/MTween.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

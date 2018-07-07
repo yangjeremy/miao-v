@@ -1,0 +1,130 @@
+/* body*/
+
+.screen {
+    background: #4d2c63;
+    width: 675px;
+    height: 460px;
+    border: 5px solid #dedbf9;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo{
+    text-align: center;
+    margin: 20px 0;
+}
+
+.info {
+    text-align: center;
+    color: #fff;
+}
+
+.info p{
+    font-size:16px;
+    margin-bottom: 10px;
+}
+
+.state{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+}
+
+.round{
+    display: block;
+    width: 60px;
+    height: 50px;
+    border-radius: 30px;
+    border: 2px solid #8f78ab;
+    text-align: center;
+    padding-top: 10px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.gain{
+    background-color: #7c2498;
+}
+
+.lose{
+    background-color: #6058ad;
+}
+
+.round span{
+    display: block;
+}
+
+.btn-box{
+    position: absolute;
+    bottom: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+.btn{
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    background-color: #71abfa;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 2px 4px 0 #b3d3ff, 2px 9px 25px rgba(0, 0, 0, .7);
+}
+
+.btn:active {
+    position: relative;
+    top: 2px;
+    box-shadow: 1px 1px 0 #b3d3ff, 0 3px 6px rgba(0, 0, 0, .9);
+}
+
+.monster{
+    width: 65px;
+    height: 75px;
+    background: url(../img/monster.png) 0 0 no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    cursor: pointer;
+}
+
+.lily {
+    background-position: 0 0;
+}
+
+.loser {
+    background-position: -70px 0;
+}
+
+.mike {
+    background-position: -130px 0;
+}
+
+.emi {
+    background-position:  0 -88px;
+}
+
+.james {
+    background-position: -70px -88px;
+}
+
+.johnny {
+    background-position: -135px -88px;
+}
+
+.screen.game-over{
+    background: #4d2c63 url("../img/gameover.png") center center no-repeat;
+}
+
+.box{
+    position: relative;
+    width: 675px;
+    height: 460px;
+    margin: 0 auto;
+}
+
+

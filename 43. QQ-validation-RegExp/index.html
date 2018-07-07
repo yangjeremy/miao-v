@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>正则验证用户输入</title>
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+    <div class="panel-lite">
+        <div class="thumbur">
+            <div class="icon-lock"></div>
+        </div>
+        <h4>用户登录</h4>
+        <div class="form-group">
+            <input type="text" required="required" class="form-control qq"/>
+            <label class="form-label">QQ号</label>
+        </div>
+        <div class="form-group">
+            <input type="text" required="required" class="form-control mobile"/>
+            <label class="form-label">手机号</label>
+        </div>
+        <div class="form-group">
+            <input type="text" required="required" class="form-control email"/>
+            <label class="form-label">邮箱</label>
+        </div>
+        <div class="form-group">
+            <input type="text" required="required" class="form-control birthday"/>
+            <label class="form-label">出生年月<span class="birthday-tip">(格式: yyyy-mm-dd或者yyyy/mm/dd)</span></label>
+        </div>
+      <div class="submit disabled">提交</div>
+    </div>
+<script>
+    function Registration(){
+        this.qq = document.querySelector('.qq');
+
+        this.mobile = document.querySelector('.mobile');
+
+        this.email = document.querySelector('.email');
+
+        this.birthday = document.querySelector('.birthday');
+
+        this.submit = document.querySelector('.submit');
+
+        this.qq.re = /^[1-9]\d{4,11}$/;
+
+        this.mobile.re = /^(1[34578]\d{9})$/;
+
+        this.email.re = /(^(1[34578]\d{9})$|^([A-Za-z][\w\-]{5,16})|^([1-9]\d{5,9}))@[A-Za-z0-9]{2,8}\.[A-Za-z]{2,3}$/;
+//        this.email.re = /^\w+@[a-z0-9]+(\.[a-z]+){1,3}$/;
+
+        // yyyy-mm-dd 或者 yyyy/mm/dd
+        this.birthday.re = /^(\d{4})(\/|-)(\d{1,2})(\/|-)(\d{1,2})$/;
+
+        this.qq.pass = true;
+
+        this.mobile.pass = true;
+
+        this.email.pass = true;
+
+        this.birthday.pass = true;
+
+    }
+
+
+    Registration.prototype.validate = function(){
+
+        this.qq.oninput = ()=>{
+            this.validateInput(this.qq);
+        };
+
+        this.mobile.oninput = ()=>{
+            this.validateInput(this.mobile);
+        };
+
+        this.email.oninput = ()=>{
+            this.validateInput(this.email);
+        };
+
+        this.birthday.oninput = ()=>{
+            this.validateBirthday(this.birthday);
+        };
+
+    };
+
+    Registration.prototype.validateInput = function(obj) {
+
+
+        var re = obj.re;
+        var value = obj.value;
+
+        if(!re.test(value)){
+            obj.pass = false;
+        }
+        else{
+            obj.pass = true;
+        }
+
+        if(value === '' || value.trim() === '' ){
+            obj.pass = true;
+        }
+
+        this.highlight(obj.pass,obj);
+
+    };
+
+
+    Registration.prototype.validateBirthday = function(obj){
+
+        console.log(obj.pass);
+
+        var re = obj.re;
+        var value = obj.value;
+
+        if(!re.test(value)){
+            obj.pass = false;
+        }
+        else{
+
+            var dateArr = value.match(re);
+
+            var year = dateArr[1];
+            var month = dateArr[3];
+            var day = dateArr[5];
+
+
+            if (month < 1 || month > 12){
+                obj.pass = false;
+            }
+
+            else if (day < 1 || day> 31){
+                obj.pass = false;
+            }
+
+            else if ((month == 4 || month == 6 || month == 9 || month == 11) && day == 31){
+                obj.pass = false;
+            }
+
+            else if (month == 2) {
+                var isleapYear = (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0));
+                if (day > 29 || (day == 29 && !isleapYear)){
+                    obj.pass = false;
+                }
+                else{
+                    obj.pass = true;
+                }
+            }
+
+            else{
+                obj.pass = true;
+            }
+        }
+
+        if(new Date(year,month-1,day).getTime() > Date.now()){
+            obj.pass = false;
+
+        }
+
+        if(value === '' || value.trim() === '' ){
+            obj.pass = true;
+        }
+
+        this.highlight(obj.pass,obj);
+    };
+
+    Registration.prototype.highlight = function(result,obj){
+        if(result){
+            obj.classList.remove('error');
+            obj.classList.add('ok');
+        }else{
+            obj.classList.remove('ok');
+            obj.classList.add('error');
+        }
+
+        if((this.qq.pass)&&(this.mobile.pass)&&(this.email.pass)&&(this.birthday.pass)){
+            this.submit.classList.remove('disabled');
+        }else{
+            this.submit.classList.add('disabled');
+        }
+    };
+
+    var reg = new Registration();
+
+    reg.validate();
+
+</script>
+
+</body>
+</html>
+<script>
+
+	
+</script>

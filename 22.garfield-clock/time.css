@@ -1,0 +1,129 @@
+/* css reset */
+body{
+    margin: 0;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* content start */
+
+.box{
+    width: 200px;
+    margin: 20px 0 auto 200px;
+    position: relative;
+    height: 360px;
+}
+
+.garfield{
+    width: 180px;
+    height: 98px;
+    background: url("img/garfeild.png") center center no-repeat;
+    margin: 0 auto;
+}
+
+.clock{
+    width: 140px;
+    height: 140px;
+    border-radius: 100px;
+    border: 2px solid #000;
+    background: #f7ca26;
+    padding: 28px;
+    position: absolute;
+    top: 65px;
+    z-index: -1;
+
+}
+
+.tail{
+    width: 70px;
+    height: 100px;
+    background: url(img/tail.png) no-repeat 0 0;
+    position: absolute;
+    bottom: 10px;
+    left: 72px;
+    z-index: -2;
+}
+
+.scale{
+    width: 136px;
+    height: 136px;
+    border-radius: 80px;
+    border: 2px solid #000;
+    background-color: #fff;
+    position: absolute;
+}
+
+.tick-mark{
+    width: 2px;
+    height: 5px;
+    background: #000;
+    border-radius: 1px;
+    position: absolute;
+    transform-origin: 0 66px;
+    top: 2px;
+    left: 68px;
+}
+
+.tick-mark.big{
+    width: 2px;
+    height: 10px;
+    border-radius: 2px;
+}
+
+.number{
+    margin-top: 10px;
+    margin-left: -2px;
+    font-size: 10px;
+    float: left;
+    font-family: fantasy;
+    font-weight: bold;
+}
+
+.point{
+    position: absolute;
+    left: 94px;
+    top: 93px;
+    width: 6px;
+    height: 6px;
+    border: 2px solid #ffc300;
+    border-radius: 6px;
+    background: #fff;
+}
+.hour{
+    width: 3px;
+    height: 32px;
+    background: #000;
+    transform-origin: 0 32px;
+    left: 98px;
+    top: 64px;
+    position: absolute;
+}
+
+.minute{
+    width: 2px;
+    height: 40px;
+    background: #000;
+    transform-origin: 0 40px;
+    position: absolute;
+    left: 98px;
+    top: 57px;
+}
+
+.second{
+    width: 1px;
+    height: 50px;
+    background: #000;
+    transform-origin: 0 46px;
+    position: absolute;
+    left: 99px;
+    top: 52px;
+}
+
+
+
+
+

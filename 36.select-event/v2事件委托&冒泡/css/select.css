@@ -1,0 +1,86 @@
+.box{
+    width: 500px;
+    height: 450px;
+    background: #433dfc;
+    margin: 100px auto;
+    overflow: hidden;
+}
+
+.select{
+    margin: 80px auto 0;
+    width: 345px;
+    height: 48px;
+    border: 1px solid #3633af;
+    background-color: #e4e3fe;
+    border-radius: 24px;
+}
+
+.select input[type=text]{
+    width: 228px;
+    height: 36px;
+    border: 1px solid #c5c6d2;
+    background: #d2d3de url("../img/magnifier.png") no-repeat 8px 6px;
+    border-radius: 18px;
+    margin: 5px;
+    padding-left: 40px;
+}
+
+.select input[type=button]{
+    width: 58px;
+    height: 38px;
+    background-color: #ff574f;
+    border-radius: 19px;
+    margin-top: 5px;
+}
+
+.select input{
+    font-size: 12px;
+}
+
+.dropdown li{
+    height: 30px;
+    width: 270px;
+    line-height: 30px;
+    margin-bottom: 3px;
+    padding-left: 16px;
+    color: #3b3b43;
+}
+
+.expand .select{
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.expand .dropdown {
+    display: block;
+}
+
+.dropdown{
+    width: 335px;
+    margin: 0 auto;
+    padding: 4px 5px 6px;
+    background-color: #e4e3fe;
+    border: 1px solid #3633af;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    border-top: none;
+    display: none;
+}
+
+.dropdown li{
+    cursor: pointer;
+}
+
+.dropdown li:hover{
+    background-color: #ff574f;
+    color: #fff;
+    border-radius: 15px;
+
+}
+
+.dropdown .active{
+    background-color: #ff574f;
+    color: #fff;
+    border-radius: 15px;
+}

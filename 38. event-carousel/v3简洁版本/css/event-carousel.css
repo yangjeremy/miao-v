@@ -1,0 +1,44 @@
+.box{
+    border: 10px solid #0f0f0f;
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+    margin: 100px auto;
+    position: relative;
+}
+
+
+
+.carousel{
+    width: 500px;
+    height: 300px;
+}
+
+.box img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+
+.btn-box .btn {
+    width: 35px;
+    height: 35px;
+    background-image: url("../img/sprite-btn.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 140px;
+    cursor: pointer;
+    opacity: .8;
+    z-index: 999;
+}
+
+.btn-box .prev {
+    background-position: 0 0;
+    left: 10px;
+}
+
+.btn-box .next {
+    background-position: -50px 0;
+    right: 10px;
+}

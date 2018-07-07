@@ -1,0 +1,41 @@
+/* 重置样式 */
+body, h1, h2, h3, h4, h5, p, dl, dd{
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: normal;
+}
+
+body {
+    font-size: 14px;
+    font-family: "microsoft yahei", sans-serif;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    vertical-align: top;
+}
+
+a{
+    text-decoration: none;
+}
+
+img {
+    vertical-align: top;
+    border: none;
+}
+
+input {
+    padding: 0;
+    border: 0;
+}
+
+em {
+    font-style: normal;
+}

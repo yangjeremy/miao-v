@@ -1,0 +1,217 @@
+/* reset */
+p{
+    margin:0;
+}
+
+h4{
+    margin-top: 0;
+}
+
+.container{
+    margin: 50px auto;
+}
+
+.header div{
+    height: 60px;
+    line-height: 60px;
+}
+
+.header .logo{
+    background-color: #de4a63;
+    text-align: center;
+}
+
+.header h1{
+    margin-top: 10px;
+}
+
+.header .toolbar {
+    background-color: #e0e8f0;
+}
+
+.header .toolbar a{
+    color: #545454;
+}
+
+.header .divider {
+    margin: 0 6px 0 10px;
+}
+
+.header .toolbar .msg{
+    display: inline-block;
+    padding: 0 15px;
+    border-radius: 6px;
+    height: 30px;
+    line-height: 30px;
+    color: #FFFDFE;
+}
+
+.content .menu{
+    background-color: #11212f;
+    padding: 20px 0;
+}
+
+ul.nav a{
+    color: #858c95;
+}
+
+.main-fn a{
+    color: #ecf1f5;
+    font-size: 16px;
+}
+
+.inbox-info{
+    height: 50px;
+    line-height: 50px;
+}
+
+.email-list {
+    overflow: auto;
+    margin-bottom: 0;
+    border-bottom: 1px solid #dce3eb;
+}
+
+.email-list h4{
+    font-size: 16px;
+}
+
+.email-list p{
+    font-size: 14px;
+}
+
+.email-list li{
+    border-top: 1px solid #dce3eb;
+    height: 65px;
+    vertical-align: top;
+    padding: 10px 15px 0;
+}
+
+.email-list li:hover{
+    background: #f1f6f9;
+
+}
+
+.email-list li.active {
+    background-color: #ffffd5;
+}
+
+.btn-box{
+    background-color: #f0f5f8;
+    padding-left: 15px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.tooltip{
+    position: absolute;
+    padding: 5px;
+    background: rgba(0,0,0,.6);
+    color: #FFFDFE;
+    border: 1px solid #FFFDFE;
+    opacity: 1;
+}
+
+.glyphicon.pink{
+    color: #df6873;
+}
+
+.glyphicon.blue{
+    color: #1c90b0;
+}
+
+.glyphicon.yellow{
+    color: #d5a06b;
+}
+
+.glyphicon.red{
+    color: #d9485c;
+}
+
+.glyphicon{
+    margin-right: 5px;
+}
+
+.nav-stacked li a{
+    padding-left: 30px;
+}
+
+.nav-pills > li > a{
+    border-radius: 0;
+}
+
+.nav-pills > li > a:hover{
+    border-left: 5px solid #d9485c;
+    padding-left: 25px;
+}
+
+.nav-pills > li > a > .badge{
+    background: #00CCFF;
+}
+
+.bg-success{
+    background: #5eb0cf;
+    margin-left: 30px;
+}
+
+.bg-warning{
+    background: #f9ba76;
+    margin-left: 10px;
+}
+
+.inbox-info{
+    padding-left: 15px;
+}
+
+.inbox-info a {
+    color: #48a7ca;
+}
+
+.list {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.btn{
+    height: 24px;
+    line-height: 24px;
+    font-size: 12px;
+    padding: 0 12px;
+    border: 1px solid #d1d7e2;
+}
+
+.btn:hover, .btn:focus, .btn.focus{
+    background: #5eb0cf;
+    color: #fff;
+}
+
+.select-all-box{
+    height: 45px;
+    line-height: 45px;
+    padding-left: 15px;
+}
+
+.select-all-box .glyphicon{
+    color: #b5b8ba;
+}
+
+.select-all-box .glyphicon{
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+input[type="checkbox"]{
+    vertical-align: middle;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.email-list input[type="checkbox"]{
+    margin-top: 0;
+}
+
+
+.nav > li > .active{
+    border-left: 5px solid #d9485c;
+    padding-left: 25px;
+    background-color: #eee;
+}

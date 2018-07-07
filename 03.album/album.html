@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>album</title>
+    <link rel="stylesheet" href="album.css">
+    <script src="album.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="ipad">
+            <div class="handset"></div>
+            <div class="screen">
+                <div class="info">
+                    <div class="btn-group clearfix">
+                        <input class="active btn left fl" type="button" value="循环切换" id="loop">
+                        <input class="btn right fr" type="button" value="顺序切换" id="order">
+                    </div>
+                    <div id="btn-desc">初始化...</div>
+                </div>
+                <div class="img-box">
+                    <img src="" title="" id="img">
+                    <div class="btn-group">
+                        <input type="button" value="<" id="pre" class="btn">
+                        <input type="button" value=">" id="next" class="btn">
+                    </div>
+                    <div class="order" id="current"></div>
+                    <div class="mask">
+                        <span id="img-desc">文字正在计算中...</span>
+                    </div>
+                    <div class="popup" id="popup">
+                        <strong>Javascript提醒</strong>
+                        <p id="popup-text">已经到第一张啦~~</p>
+                        <input type="button" value="确定" id="ok">
+                        <span class="close" id="close"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="home"></div>
+        </div>
+    </div>
+</body>
+</html>

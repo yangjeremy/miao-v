@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>放大镜</title>
+    <style>
+        body{
+            margin: 0;
+        }
+
+        img{
+            border: none;
+            vertical-align: top;
+        }
+
+        .box img{
+            width: 500px;
+            height: 300px;
+        }
+
+        .box{
+            border: 5px solid #0e3757;
+        }
+
+        .magnifier{
+            width: 60px;
+            height: 60px;
+            background-color: greenyellow;
+            opacity: .7;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+
+        .box{
+            float: left;
+            position: relative;
+            margin-left:100px;
+            margin-top: 30px;
+        }
+
+        .huge-box{
+            float: left;
+            width: 180px;
+            height: 180px;
+            border: 2px solid #000;
+            display: none;
+            margin-left: 10px;
+            margin-top: 30px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .huge-box img{
+            width: 1500px;
+            height: 900px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="person.jpg" alt="person">
+        <div class="magnifier"></div>
+    </div>
+    <div class="huge-box">
+        <img src="person.jpg" alt="person">
+    </div>
+
+    <script src="emi.js"></script>
+    <script>
+        var box = document.querySelector('.box');
+        var magnifier = document.querySelector('.magnifier');
+        var hugeBox = document.querySelector('.huge-box');
+
+        var hugeImg = hugeBox.querySelector('img');
+
+
+        //边界处理
+        var maxLeft = box.clientWidth - getCss(magnifier,'width');
+        var minLeft = 0;
+
+        var maxTop = box.clientHeight - getCss(magnifier,'height');
+        var minTop = 0;
+
+        box.onmouseover = function(){
+            hugeBox.style.display = 'block';
+            magnifier.style.display = 'block';
+        };
+
+        box.onmouseout = function(){
+            hugeBox.style.display = 'none';
+            magnifier.style.display = 'none';
+
+        };
+
+        box.onmousemove = function(ev){
+            var ev = ev||event;
+
+            var leftM = ev.clientX - box.offsetLeft - magnifier.offsetWidth/2 + window.pageXOffset;
+            var topM = ev.clientY - box.offsetTop - magnifier.offsetHeight/2 + window.pageYOffset;
+
+            if(leftM >= maxLeft){
+                leftM = maxLeft;
+            }
+
+            if(leftM <= minLeft){
+                leftM = minLeft;
+            }
+
+            if(topM >= maxTop){
+                topM = maxTop;
+            }
+
+            if(topM <= minTop){
+                topM = minTop;
+            }
+
+            magnifier.style.left = leftM + 'px';
+            magnifier.style.top = topM + 'px';
+
+            hugeImg.style.left = -magnifier.offsetLeft/box.clientWidth * getCss(hugeImg,'width') + 'px';
+            hugeImg.style.top = -magnifier.offsetTop/box.clientHeight * getCss(hugeImg,'height') + 'px';
+
+        };
+
+
+    </script>
+</body>
+</html>

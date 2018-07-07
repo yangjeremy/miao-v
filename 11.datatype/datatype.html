@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>data type</title>
+    <style>
+        .box {
+            text-align: center;
+            width: 900px;
+            height: 595px;
+            background: #00AA88;
+            margin: 50px auto;
+            padding-top: 30px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <img src="data.jpg" alt="data">
+    <div class="result">
+        <p class="allNum">所有的数字是:</p>
+        <p class="transformNum">可以转成数字的:</p>
+        <p class="max">转成数字的最大值:</p>
+        <p class="nanIndex">所有运算结果是NaN的位置</p>
+    </div>
+</div>
+<script>
+    var arr = [
+                '100px',
+                'abd'-6, //NaN
+                [],
+                -98765,
+                34,
+                -2,
+                0,
+                '300',
+                ,
+                function(){alert(1)},
+                null,
+                document,
+                [],
+                true,
+                '200px'-30, //NaN
+                '23.45元',
+                5,
+                Number('abc'), //NaN
+                function() {alert(3);},
+                'xyz'-90 //NaN
+            ];
+
+
+    var allNumArr = []; //所有的数字
+    var transformNumArr = []; //可转成数字的
+    var numArr = []; //存放所有的可转成的数字
+    var nanIndexArr = []; //存放所有NaN
+
+    var allNum = document.querySelector('.allNum');
+    var transformNum = document.querySelector('.transformNum');
+    var max = document.querySelector('.max');
+    var nanIndex = document.querySelector('.nanIndex');
+
+    var len = arr.length;
+
+    var test = [];
+    var test1 = [];
+    var test2 = [];
+
+    var test3 = [];
+
+
+    for(var i = 0; i < len; i++) {
+        test.push(typeof parseInt(arr[i]));
+        test1.push(Number(arr[i]));
+        test2.push(arr[i]);
+
+
+        //找到所有数字
+        if (typeof arr[i] == 'number' && !isNaN(arr[i])) {
+            allNumArr.push(parseInt(arr[i]));
+        }
+
+        //找到所有可转换的数字
+        if (!isNaN(parseInt(arr[i]))) {
+            transformNumArr.push(arr[i]);
+            numArr.push(parseInt(arr[i]));
+        }
+//        if(!isNaN(Number(arr[i]))){
+//            transformNumArr.push(arr[i]);
+//        }
+
+        if(isNaN(arr[i])&&(typeof arr[i]=='number')){
+            //找到所有NaN的数字
+            nanIndexArr.push(i);
+        }
+    }
+
+    console.log(test);
+    console.log(test1);
+    console.log(test2);
+
+
+    //找到数字中的最大值 max
+    var maxArr = [];
+    maxArr = numArr.sort(function (n,m) {
+        return m-n;
+    });
+
+//    var max = 0;
+//    for(var i = 0; i < num.length; i++){
+//        if(num[i]>biggestNum){
+//            biggestNum = num[i];
+//        }
+//    }
+
+
+    //在页面上显示：
+    for (var i = 0; i < allNumArr.length; i++){
+        allNum.innerHTML += allNumArr[i] + ' ';
+    }
+
+    for (var i = 0; i < transformNumArr.length; i++){
+        transformNum.innerHTML += transformNumArr[i] + ' ';
+    }
+
+    max.innerHTML += maxArr[0];
+
+    for (var i = 0; i < nanIndexArr.length; i++){
+        nanIndex.innerHTML += nanIndexArr[i] + ' ';
+    }
+
+    console.log(Number('100'));
+
+</script>
+</body>
+</html>

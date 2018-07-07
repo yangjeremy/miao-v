@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>居中弹出层</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/popup.css">
+</head>
+<body>
+<div class="popup clearfix">
+    <div class="close"></div>
+    <div class="left fl">
+        <div class="heading clearfix">
+            <h3 class="fl">登录</h3>
+            <span class="fl">支持优酷和土豆账号</span>
+        </div>
+        <div class="login">
+            <div class="login-group clearfix">
+                <input type="button" value="" class="weibo-login btn fl">
+                <input type="button" value="" class="qq-login btn fl">
+                <input type="button" value="" class="other-login fl">
+            </div>
+        </div>
+        <form action="" class="login-form">
+            <input type="text" class="form-control" placeholder="手机号或者邮箱地址">
+            <input type="text" class="form-control" placeholder="固定密码">
+            <input type="submit" value="登录" class="submit-btn">
+            <ul class="links clearfix">
+                <li class="fl">
+                    <input type="checkbox" name="" id="">
+                    <a href="">自动登录</a>
+                </li>
+                <li class="fl">
+                    <a href="">忘记密码</a>
+                </li>
+                <li class="fl">
+                    <a href="">免费注册</a>
+                </li>
+            </ul>
+        </form>
+    </div>
+    <div class="right fl">
+        <h4 class="qr-title">用土豆APP扫描, 安全登陆</h4>
+        <img src="img/qr-code.png" alt="qr code">
+        <span class="text">也支持其他扫码工具</span>
+    </div>
+</div>
+
+<script src="js/emi.js"></script>
+<script src="js/popup.js"></script>
+</body>
+</html>
